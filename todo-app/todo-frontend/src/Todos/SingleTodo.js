@@ -1,7 +1,6 @@
 import React from 'react'
 
 const SingleTodo = ({ todo, onClickComplete, onClickDelete }) => {
-  console.log(todo)
   const doneInfo = (
     <>
       <span>This todo is done</span>
