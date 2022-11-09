@@ -12,12 +12,12 @@ jobs:
     steps:
       - name: Say hello
         run: |
-          echo "Hello World!"
+          echo "Hello World!" && echo ${GITHUB_WORKSPACE}
   content_listing:
     runs-on: ubuntu-20.04
     steps:
       - name: print folder content
-        working-directory: todo-app/todo-backend
+        working-directory: ${GITHUB_WORKSPACE}/todo-app/todo-backend
         run: |
           ls
   date:
