@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: print folder content
-        working-directory: ./todo-app/todo-backend
+        working-directory: todo-app/todo-backend
         run: |
           ls
   date:
