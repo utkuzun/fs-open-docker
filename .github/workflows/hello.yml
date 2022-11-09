@@ -6,18 +6,21 @@ on:
       - master
       # note that your "main" branch might be called main instead of master
 
+defaults:
+  run:
+    working-directory: /todo-app/todo-backend
+
 jobs:
   hello_world_job:
     runs-on: ubuntu-20.04
     steps:
       - name: Say hello
         run: |
-          echo "Hello World!" && echo ${GITHUB_WORKSPACE}
+          echo "Hello World!"
   content_listing:
     runs-on: ubuntu-20.04
     steps:
       - name: print folder content
-        working-directory: ${GITHUB_WORKSPACE}/todo-app/todo-backend
         run: |
           ls
   date:
