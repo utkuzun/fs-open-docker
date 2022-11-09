@@ -6,13 +6,13 @@ on:
       - master
       # note that your "main" branch might be called main instead of master
 
-defaults:
-  run:
-    working-directory: todo-app
-
 jobs:
   hello_world_job:
     runs-on: ubuntu-20.04
+    defaults:
+      run:
+        # Mobile folder working directory.
+        working-directory: todo-app
     steps:
       - name: Say hello
         run: |
