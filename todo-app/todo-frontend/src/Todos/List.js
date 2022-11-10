@@ -21,7 +21,7 @@ const TodoList = ({ todos, deleteTodo, completeTodo }) => {
             onClickDelete={onClickDelete}
           />
         ))
-        .reduce((acc, cur) => [...acc, <hr />, cur], [])}
+        .reduce((acc, cur) => [...acc, <hr key={cur.text} />, cur], [])}
     </>
   )
 }
