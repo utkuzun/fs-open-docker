@@ -19,7 +19,7 @@ jobs:
       - name: print folder content
         run: |
           ls && pwd
-        working-directory: ./todo-app
+        working-directory: todo-app
   date:
     runs-on: ubuntu-20.04
     steps:
