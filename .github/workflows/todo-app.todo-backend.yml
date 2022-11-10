@@ -12,6 +12,7 @@ on:
 jobs:
   simple_development_pipeline:
     runs-on: ubuntu-20.04
+    working_directory: todo-app/todo-backend
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
