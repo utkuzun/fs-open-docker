@@ -10,8 +10,11 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  simple_development_pipeline:
+  server_development_pipeline:
     runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: todo-app/todo-backend
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -19,7 +22,8 @@ jobs:
           node-version: '18'
       - name: npm install
         run: npm install
-        working-directory: todo-app/todo-backend
+      - name: ls
+        run: ls
   #     - name: lint
   #       run: npm run eslint
   #     - name: unit tests
