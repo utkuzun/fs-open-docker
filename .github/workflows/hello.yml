@@ -9,10 +9,6 @@ on:
 jobs:
   hello_world_job:
     runs-on: ubuntu-20.04
-    defaults:
-      run:
-        # Mobile folder working directory.
-        working-directory: todo-app
     steps:
       - name: Say hello
         run: |
@@ -22,7 +18,8 @@ jobs:
     steps:
       - name: print folder content
         run: |
-          ls
+          ls && pwd
+        working-directory: ./todo-app
   date:
     runs-on: ubuntu-20.04
     steps:
